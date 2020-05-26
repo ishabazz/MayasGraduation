@@ -44,9 +44,9 @@ function Yearbook() {
 
     return (
         <Row className="colorful-border">
-            <Container className="yearbook section my-5">
+            <Container className="yearbook section mx-auto my-5">
                 <h2 className="text-center display-4">Sign my <span className="text-underline-danger">Yearbook.</span></h2>
-                <Row className="mt-4 mb-5">
+                <Row className="mt-4 mb-5 mx-3">
                     <Col md={{span:6, offset: 3}}>
                         <Form className="message form text-center p-4 shadow-sm" onSubmit={onCreate}>
                             <Form.Group as={Row} controlId="messageForm.from">
@@ -80,12 +80,12 @@ function Yearbook() {
                     </Col>
                 </Row>
                 <hr className="hr-sm mb-5"/>
-                {loading && <p className="h3 text-muted text-center">Loading...</p>}
-                {(!loading && messages.length === 0) && <p className="h3 text-center text-muted">No messages yet!</p>}
+                {loading && <p className="h3 mx-3 text-muted text-center">Loading...</p>}
+                {(!loading && messages.length === 0) && <p className="h3 mx-3 text-center text-muted">No messages yet!</p>}
                 {messages.length > 0 && <StackGrid
                     columnWidth="50%"
                     gutterHeight={6}
-                    className="messages-grid"
+                    className="messages-grid mx-3"
                 >
                     {messages.map((message) => (
                         <Message key={message.id} message={message}/>
