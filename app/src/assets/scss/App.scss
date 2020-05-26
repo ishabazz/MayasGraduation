@@ -32,6 +32,7 @@ $rhythm: #6A6C82;
 $danger: $burgundy;
 $primary: $congo-pink;
 $info: $independence;
+$success: $space-cadet;
 $light: $ghost-white;
 
 $body-font-color: $raisin-black;
@@ -64,9 +65,41 @@ body {
   width: 100%;
   border-width: 0;
   border-top: 4px solid;
-  -o-border-image: -o-linear-gradient(left, #575a7b, #575a7b 20%, #f9655b 20%, #f9655b 40%, #f5c070 40%, #f5c070 60%, #6658ea 60%, #6658ea 80%, #fcc 80%) 1;
-  border-image: -webkit-gradient(linear, left top, right top, from(#575a7b), color-stop(20%, #575a7b), color-stop(20%, #f9655b), color-stop(40%, #f9655b), color-stop(40%, #f5c070), color-stop(60%, #f5c070), color-stop(60%, #6658ea), color-stop(80%, #6658ea), color-stop(80%, #fcc)) 1;
-  border-image: linear-gradient(to right, #575a7b, #575a7b 20%, #f9655b 20%, #f9655b 40%, #f5c070 40%, #f5c070 60%, #6658ea 60%, #6658ea 80%, #fcc 80%) 1;
+  -o-border-image: -o-linear-gradient(left, $space-cadet, $space-cadet 20%, $independence 20%, $independence 40%, $primary 40%, $primary 60%, $vivid-burgundy 60%, $vivid-burgundy 80%, $space-cadet 80%) 1;
+  border-image: -webkit-gradient(linear, left top, right top, from($space-cadet), color-stop(20%, $space-cadet), color-stop(20%, $independence), color-stop(40%, $independence), color-stop(40%, $primary), color-stop(60%, $primary), color-stop(60%, $vivid-burgundy), color-stop(80%, $vivid-burgundy), color-stop(80%, $space-cadet)) 1;
+  border-image: linear-gradient(to right, $space-cadet, $space-cadet 20%, $independence 20%, $independence 40%, $primary 40%, $primary 60%, $vivid-burgundy 60%, $vivid-burgundy 80%, $space-cadet 80%) 1;
+}
+
+// Yearbook
+.message {
+  &.form {
+    input, textarea {
+      background-color: $space-cadet;
+      border: none;
+      color: white;
+    }
+
+    ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+      color: white;
+      opacity: 0.5; /* Firefox */
+    }
+
+    :-ms-input-placeholder { /* Internet Explorer 10-11 */
+      color: white;
+    }
+
+    ::-ms-input-placeholder { /* Microsoft Edge */
+      color: white;
+    }
+  }
+  background-color: $space-cadet;
+  border-bottom-right-radius: 0.7rem;
+  border-top-left-radius: 0.7rem;
+  color: $white;
+  font-size: 1.2rem;
+  .name {
+    font-weight: 600;
+  }
 }
 
 // Navigation

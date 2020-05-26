@@ -9,7 +9,7 @@ function Navigation() {
                     <Nav.Link href="#">Watch me Graduate</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                    <Nav.Link href="#">Join me at the #afterParty</Nav.Link>
+                    <Nav.Link href="#">Join the #afterParty</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
                     <img src="https://placekitten.com/40/40" alt="logo"/>

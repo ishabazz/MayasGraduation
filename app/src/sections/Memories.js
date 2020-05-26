@@ -37,7 +37,7 @@ function Memories() {
                     >
                         {memoriesArray.map((image, key) => {
                             return (
-                                <Card className="pb-3 mx-1 mx-md-3 border-0 shadow">
+                                <Card key={key} className="pb-3 mx-1 mx-md-3 border-0 shadow">
                                     <Card.Img variant="top" src={image} />
                                 </Card>
                             );
