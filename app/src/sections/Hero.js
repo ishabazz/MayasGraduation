@@ -8,7 +8,7 @@ function Hero() {
     return (
         <Row>
             <Col className="px-0">
-                <Container className="hero d-flex flex-column pt-3" fluid>
+                <Container className="hero d-flex flex-column pt-3 overflow-hidden" fluid>
                     <Row>
                         <Col className="hero-img px-0">
                             <img src={heroImg} alt="Maya in her Graduation Gown"/>

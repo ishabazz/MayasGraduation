@@ -12,11 +12,11 @@ import WatchParty from "./sections/WatchParty";
 
 function App() {
   return (
-      <FadeIn>
+      <>
           <header className="App-header">
               <Navigation/>
           </header>
-          <main className="">
+          <main className="d-flex-column">
               <Hero/>
               <Graduation/>
               <WatchParty/>
@@ -25,7 +25,7 @@ function App() {
           </main>
           <footer>
           </footer>
-      </FadeIn>
+      </>
   );
 }
 
