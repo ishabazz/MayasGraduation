@@ -1,101 +1,52 @@
-import React, {useState} from 'react';
+import React from 'react';
 import '../assets/scss/Memories.scss';
-import {Button, Container} from "react-bootstrap";
-
+import {Container, Card, Row} from "react-bootstrap";
 import {memoriesArray} from "./MemoriesArray";
+import Carousel from '@brainhubeu/react-carousel';
+import '@brainhubeu/react-carousel/lib/style.css';
+
 
 function Memories() {
-    const maxCount = 47;
-    const increment = 10;
-    const [count, setCount] = useState(0);
-    const [images, setImages] = useState([]);
-    let breakPoints = [350, 500, 750];
-
-    const loadMore = e => {
-        if (count < maxCount) {
-
-        }
-    }
-
     return (
         <>
-            <Container className="memories my-4">
-                <h1 className="heading text-center">Memories</h1>
-                <div className="masonry-container mt-4">
-                    <Masonry brakePoints={breakPoints}>
+            <Row className="memories section py-4">
+                <Container>
+                    <h2 className="display-3 text-center">#memories</h2>
+                    <Carousel
+                        slidesPerPage={3}
+                        arrows
+                        infinite
+                        centered
+                        keepDirectionWhenDragging
+                        autoPlay={2000}
+                        animationSpeed={1000}
+                        breakpoints={{
+                            350: {
+                                slidesPerPage: 1,
+                                arrows: false
+                            },
+                            500: {
+                                slidesPerPage: 2,
+                                arrows: false
+                            },
+                            750: {
+                                slidesPerPage: 3,
+                                arrows: false
+                            }
+                        }}
+                    >
                         {memoriesArray.map((image, key) => {
                             return (
-                                <Tile key={key} src={image} />
-                            )
+                                <Card className="pb-3 mx-1 mx-md-3 border-0 shadow">
+                                    <Card.Img variant="top" src={image} ></Card.Img>
+                                </Card>
+                            );
                         })}
-                    </Masonry>
-                </div>
-                <Button variant="danger" onClick={loadMore}>Load More</Button>
-            </Container>
+                    </Carousel>
+                </Container>
+            </Row>
         </>
     );
-}
-
-const Tile = ({src}) => {
-    return (
-        <div className="tile">
-            <img src={src} alt="memory"/>
-        </div>
-    );
-};
-
-class Masonry extends React.Component{
-    constructor(props){
-        super(props);
-        this.state = {columns: 1};
-        this.onResize = this.onResize.bind(this);
-    }
-    componentDidMount(){
-        this.onResize();
-        window.addEventListener('resize', this.onResize)
-    }
-
-    getColumns(w){
-        return this.props.brakePoints.reduceRight( (p, c, i) => {
-            return c < w ? p : i;
-        }, this.props.brakePoints.length) + 1;
-    }
-
-    onResize(){
-        const columns = this.getColumns(this.refs.Masonry.offsetWidth);
-        if(columns !== this.state.columns){
-            this.setState({columns: columns});
-        }
-
-    }
-
-    mapChildren(){
-        let col = [];
-        const numC = this.state.columns;
-        for(let i = 0; i < numC; i++){
-            col.push([]);
-        }
-        return this.props.children.reduce((p,c,i) => {
-            p[i%numC].push(c);
-            return p;
-        }, col);
-    }
-
-    render(){
-        return (
-            <div className="masonry" ref="Masonry">
-                {this.mapChildren().map((col, ci) => {
-                    return (
-                        <div className="column" key={ci} >
-                            {col.map((child, i) => {
-                                return <div key={i} >{child}</div>
-                            })}
-                        </div>
-                    )
-                })}
-            </div>
-        )
-    }
 }
 
 export default Memories;
