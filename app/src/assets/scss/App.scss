@@ -27,12 +27,14 @@ $taupe-gray: #84828F;
 $raisin-black: #28272B;
 $space-cadet: #2C2E4C;
 $ghost-white: rgba(232, 237, 242, 0.62);
+$rhythm: #6A6C82;
 
 $danger: $burgundy;
 $primary: $congo-pink;
 $info: $independence;
+$light: $ghost-white;
 
-$body-font-color: $raisin-black;
+$body-font-color: $space-cadet;
 
 @import "../../../node_modules/bootstrap/scss/bootstrap";
 
@@ -53,6 +55,18 @@ body {
 
 .hr-info {
   background-color: $independence;
+}
+
+.colorful-border {
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-width: 0;
+  border-top: 4px solid;
+  -o-border-image: -o-linear-gradient(left, #575a7b, #575a7b 20%, #f9655b 20%, #f9655b 40%, #f5c070 40%, #f5c070 60%, #6658ea 60%, #6658ea 80%, #fcc 80%) 1;
+  border-image: -webkit-gradient(linear, left top, right top, from(#575a7b), color-stop(20%, #575a7b), color-stop(20%, #f9655b), color-stop(40%, #f9655b), color-stop(40%, #f5c070), color-stop(60%, #f5c070), color-stop(60%, #6658ea), color-stop(80%, #6658ea), color-stop(80%, #fcc)) 1;
+  border-image: linear-gradient(to right, #575a7b, #575a7b 20%, #f9655b 20%, #f9655b 40%, #f5c070 40%, #f5c070 60%, #6658ea 60%, #6658ea 80%, #fcc 80%) 1;
 }
 
 // Navigation
@@ -104,6 +118,16 @@ body {
       &:hover {
         background-color: rgba(247, 125, 114, 0.8);
       }
+    }
+  }
+  &.watch-party {
+    background-repeat: repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+
+    .invite {
+      background-color: $space-cadet;
     }
   }
 }
