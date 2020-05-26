@@ -11,7 +11,7 @@ function Memories() {
         <>
             <Row className="memories section py-4">
                 <Container>
-                    <h2 className="display-3 text-center">#memories</h2>
+                    <h2 className="display-4 text-center">#memories</h2>
                     <Carousel
                         slidesPerPage={3}
                         arrows
@@ -38,7 +38,7 @@ function Memories() {
                         {memoriesArray.map((image, key) => {
                             return (
                                 <Card className="pb-3 mx-1 mx-md-3 border-0 shadow">
-                                    <Card.Img variant="top" src={image} ></Card.Img>
+                                    <Card.Img variant="top" src={image} />
                                 </Card>
                             );
                         })}
