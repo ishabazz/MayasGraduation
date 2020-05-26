@@ -8,10 +8,14 @@ import Message from "./Message";
 
 function Yearbook() {
     const [messages, setMessages] = useState([]);
-    const [newMessage, setNewMessage] = useState(null);
-    const [from, setFrom] = useState(null);
+    const [newMessage, setNewMessage] = useState("");
+    const [from, setFrom] = useState("");
+    const [disabled, setDisabled] = useState(false);
+    const [saved, setSaved] = useState(false);
+    const [loading, setLoading] = useState(false);
 
     const fetchData = () => {
+
         const db = firebase.firestore();
         return db.collection("messages").onSnapshot((snapshot => {
             const messagesData = [];
@@ -22,8 +26,17 @@ function Yearbook() {
 
     const onCreate = (e) => {
         e.preventDefault();
+        setDisabled(true);
         const db = firebase.firestore()
-        db.collection("messages").add({name: from, message: newMessage});
+        db.collection("messages").add({name: from, message: newMessage}).then(ref => {
+            setSaved(true);
+            setTimeout(() => {
+                setNewMessage("");
+                setFrom("");
+                setSaved(false);
+                setDisabled(false);
+            }, 1000);
+        });
     }
 
     useEffect(fetchData, []);
@@ -56,7 +69,11 @@ function Yearbook() {
                             />
                             </Form.Group>
                             <Form.Group controlId="messageForm.button">
-                                <Button type="submit" variant="primary">Leave a Message</Button>
+                                <Button
+                                    type="submit"
+                                    variant="primary"
+                                    disabled={disabled}
+                                >{saved ? "Saved" : "Leave a Message"}</Button>
                             </Form.Group>
                         </Form>
                     </Col>
