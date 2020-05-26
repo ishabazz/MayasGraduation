@@ -15,12 +15,13 @@ function Yearbook() {
     const [loading, setLoading] = useState(false);
 
     const fetchData = () => {
-
+        setLoading(true);
         const db = firebase.firestore();
         return db.collection("messages").onSnapshot((snapshot => {
             const messagesData = [];
             snapshot.forEach(document => messagesData.push(({...document.data(), id:document.id})))
             setMessages(messagesData);
+            setLoading(false);
         }));
     }
 
@@ -79,7 +80,9 @@ function Yearbook() {
                     </Col>
                 </Row>
                 <hr className="hr-sm mb-5"/>
-                <StackGrid
+                {loading && <p className="h3 text-muted text-center">Loading...</p>}
+                {(!loading && messages.length === 0) && <p className="h3 text-center text-muted">No messages yet!</p>}
+                {messages.length > 0 && <StackGrid
                     columnWidth="50%"
                     gutterHeight={6}
                     className="messages-grid"
@@ -87,7 +90,7 @@ function Yearbook() {
                     {messages.map((message) => (
                         <Message key={message.id} message={message}/>
                     ))}
-                </StackGrid>
+                </StackGrid>}
             </Container>
         </Row>
     );

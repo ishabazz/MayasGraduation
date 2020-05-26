@@ -34,6 +34,7 @@ $primary: $congo-pink;
 $info: $independence;
 $success: $space-cadet;
 $light: $ghost-white;
+$text-muted: $independence;
 
 $body-font-color: $raisin-black;
 
@@ -62,7 +63,7 @@ body {
   content: "";
   top: 0;
   left: 0;
-  width: 100%;
+  //width: 100%;
   border-width: 0;
   border-top: 4px solid;
   -o-border-image: -o-linear-gradient(left, $space-cadet, $space-cadet 20%, $independence 20%, $independence 40%, $primary 40%, $primary 60%, $vivid-burgundy 60%, $vivid-burgundy 80%, $space-cadet 80%) 1;
