@@ -113,8 +113,18 @@ body {
     //border-top-right-radius: 0.5rem;
     //border-bottom-right-radius: 0.5rem;
     //background-color: #A8175F;
+    position: relative;
     background-color: $burgundy;
 
+    .img {
+      position:absolute;
+      &.top {
+        top: 0
+      }
+      &.bottom {
+        bottom: 0
+      }
+    }
   }
 
   .hero-img {
