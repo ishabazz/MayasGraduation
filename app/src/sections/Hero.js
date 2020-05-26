@@ -1,5 +1,5 @@
 import React from 'react';
-import {Jumbotron, Container, Row, Col} from "react-bootstrap";
+import {Container, Row, Col} from "react-bootstrap";
 import heroImg from '../assets/images/hero.gif'
 
 function Hero() {
