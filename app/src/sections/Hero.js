@@ -1,25 +1,25 @@
 import React from 'react';
 import {Container, Row, Col} from "react-bootstrap";
 import heroImg from '../assets/images/hero.gif'
-import bottomPattern from '../assets/images/bottompattern.svg';
-import topPattern from '../assets/images/toppattern.svg';
 
 function Hero() {
     return (
-        <Row>
+        <Row className="colorful-border bottom">
             <Col className="px-0">
-                <Container className="hero d-flex flex-column pt-3 overflow-hidden" fluid>
-                    <Row>
+                <Container className="hero d-flex section flex-column overflow-hidden " fluid>
+                    <Row className="">
                         <Col className="hero-img px-0">
                             <img src={heroImg} alt="Maya in her Graduation Gown"/>
                         </Col>
-                        <Col className="hero-copy d-flex flex-column justify-content-center align-items-center px-3">
-                            <img className="top" src={bottomPattern} alt="top pattern"/>
-                            <h1 className="display-2 text-white text-left mb-3">She believed<br/> she could,<br/> so she did.</h1>
-                            <img className="bottom" src={topPattern} alt="bottom pattern"/>
+                        <Col className="hero-copy d-flex flex-column justify-content-center align-items-center p-4">
+                            <h1 className="display-3 text-left">
+                                She believed<br/> she could,<br/> and she
+                                <span className="text-underline-danger"> did.</span>
+                            </h1>
+                            <h3 className="name mt-3 ">Maya Brewer Shabazz</h3>
+                            <p className="class font-weight-bold">Class of 2020</p>
                         </Col>
                     </Row>
-
                 </Container>
             </Col>
         </Row>

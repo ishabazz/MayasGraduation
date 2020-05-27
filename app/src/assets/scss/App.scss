@@ -70,6 +70,10 @@ body {
   -o-border-image: -o-linear-gradient(left, $space-cadet, $space-cadet 20%, $independence 20%, $independence 40%, $primary 40%, $primary 60%, $vivid-burgundy 60%, $vivid-burgundy 80%, $space-cadet 80%) 1;
   border-image: -webkit-gradient(linear, left top, right top, from($space-cadet), color-stop(20%, $space-cadet), color-stop(20%, $independence), color-stop(40%, $independence), color-stop(40%, $primary), color-stop(60%, $primary), color-stop(60%, $vivid-burgundy), color-stop(80%, $vivid-burgundy), color-stop(80%, $space-cadet)) 1;
   border-image: linear-gradient(to right, $space-cadet, $space-cadet 20%, $independence 20%, $independence 40%, $primary 40%, $primary 60%, $vivid-burgundy 60%, $vivid-burgundy 80%, $space-cadet 80%) 1;
+  &.bottom {
+    border-top: none;
+    border-bottom: 7px solid;
+  }
 }
 
 // Yearbook
@@ -104,39 +108,35 @@ body {
   }
 }
 
-// Navigation
-//header {
-//  background-color: $burgundy;
-//}
+.logo {
+  width: 150px;
+}
 
 // Hero js
 
 .hero {
   .hero-copy {
-    //border-top-right-radius: 0.5rem;
-    //border-bottom-right-radius: 0.5rem;
-    //background-color: #A8175F;
     position: relative;
-    background-color: $burgundy;
-
-    .img {
-      position:absolute;
-      &.top {
-        top: 0
-      }
-      &.bottom {
-        bottom: 0
-      }
+    background-color: $white;
+    height: 100vh;
+    .name {
+    }
+    .class {
+      font-size: 1.2rem;
+      color: $congo-pink;
+      font-weight: lighter;
     }
   }
 
   .hero-img {
+    height: 100vh;
     img {
      // border-bottom-left-radius: 0.5rem;
       //border-top-left-radius: 0.5rem;
       width: 100%;
       height: 100%;
       object-fit: cover;
+      object-position: top;
     }
   }
 }
@@ -144,12 +144,13 @@ body {
 // Graduation
 .section {
   &.graduation {
+    height: 100vh;
     background-color: $space-cadet;
     color: $white;
     background-repeat: repeat;
     background-position: center;
-    background-size: cover;
-    //background-attachment: fixed;
+    background-size: 800px;
+    background-attachment: fixed;
 
     .text-underline-danger {
       background-image: -webkit-gradient(linear, left top, right top, from(rgba(247, 125, 114, 0.8)));
@@ -161,6 +162,7 @@ body {
       padding-left: 1rem;
       padding-right: 1rem;
       object-fit: contain;
+      max-height: 500px;
     }
 
     .BrainhubCarousel__arrows {
@@ -262,8 +264,14 @@ a {
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   .hero > .row {
     flex-direction: column;
+    .hero-copy {
+      height: 90vh;
+    }
+    .hero-img {
+      height: 60vh;
+    }
   }
 }
