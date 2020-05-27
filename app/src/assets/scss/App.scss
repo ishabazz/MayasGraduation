@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Gaegu:wght@300;400;700&display=swap');
+@import '~video-react/styles/scss/video-react';
 
 @font-face {
   font-family: "ExplorerFree-Regular";
@@ -197,5 +198,22 @@ a {
     &:hover {
       color: white;
     }
+  }
+}
+
+.video-react {
+  border: 10px solid #f5f5f5;
+  margin: 0 auto;
+}
+
+.video-container {
+  background: #f5f5f5;
+  width: 350px;
+  margin: 0 auto;
+
+  p {
+    color: #2C2E4C;
+    font-size: 1em;
+    padding: 1em 0;
   }
 }
