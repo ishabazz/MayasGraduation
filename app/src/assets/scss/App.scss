@@ -71,7 +71,7 @@ body {
   border-image: -webkit-gradient(linear, left top, right top, from($space-cadet), color-stop(20%, $space-cadet), color-stop(20%, $independence), color-stop(40%, $independence), color-stop(40%, $primary), color-stop(60%, $primary), color-stop(60%, $vivid-burgundy), color-stop(80%, $vivid-burgundy), color-stop(80%, $space-cadet)) 1;
   border-image: linear-gradient(to right, $space-cadet, $space-cadet 20%, $independence 20%, $independence 40%, $primary 40%, $primary 60%, $vivid-burgundy 60%, $vivid-burgundy 80%, $space-cadet 80%) 1;
   &.bottom {
-    border-top: none;
+    border-top: 0 solid;
     border-bottom: 7px solid;
   }
 }
