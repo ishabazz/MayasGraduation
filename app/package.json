@@ -17,6 +17,7 @@
     "react-dom": "^16.13.1",
     "react-fade-in": "^1.0.0",
     "react-firebase": "^2.2.8",
+    "react-lazy-load-image-component": "^1.4.3",
     "react-linkify": "^1.0.0-alpha",
     "react-scripts": "3.4.1",
     "react-stack-grid": "^0.7.1",

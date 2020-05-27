@@ -4,6 +4,7 @@ import {Container, Card, Row, Col} from "react-bootstrap";
 import {memoriesArray} from "./MemoriesArray";
 import Carousel from '@brainhubeu/react-carousel';
 import '@brainhubeu/react-carousel/lib/style.css';
+import { LazyLoadComponent } from 'react-lazy-load-image-component';
 
 
 function Memories() {
@@ -38,9 +39,13 @@ function Memories() {
                         >
                             {memoriesArray.map((image, key) => {
                                 return (
-                                    <Card key={key} className="rounded-0 pb-3 mx-1 mx-md-3 border-0 shadow">
-                                        <Card.Img variant="top" src={image} />
-                                    </Card>
+                                    <LazyLoadComponent
+                                        visibleByDefault={true}
+                                    >
+                                        <Card key={key} className="rounded-0 pb-3 mx-1 mx-md-3 border-0 shadow">
+                                            <Card.Img variant="top" src={image} />
+                                        </Card>
+                                    </LazyLoadComponent>
                                 );
                             })}
                         </Carousel>
