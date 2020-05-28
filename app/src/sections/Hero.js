@@ -1,8 +1,5 @@
 import React from 'react';
 import {Container, Row, Col} from "react-bootstrap";
-import heroImg from '../assets/images/hero.gif'
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-import 'react-lazy-load-image-component/src/effects/blur.css';
 
 function Hero() {
     return (
@@ -11,10 +8,6 @@ function Hero() {
                 <div className="hero">
                     <Row className="">
                         <div className="hero-img">
-                            {/*<LazyLoadImage*/}
-                            {/*    alt={"Maya in her Graduation Gown"}*/}
-                            {/*    effect="blur"*/}
-                            {/*    src={heroImg} />*/}
                         </div>
                         <div className="hero-copy">
                             <h1 className="display-3">
