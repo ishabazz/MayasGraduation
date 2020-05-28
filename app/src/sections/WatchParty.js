@@ -15,7 +15,7 @@ function WatchParty({watchParty = {link: "", timestamp: "", password: ""}, cerem
                     <Row className="justify-content-center mb-sm-2 pt-4">
                         <Col md={5} sm={12} xs={12} className="ceremony invite text-center rounded mt-3 py-5">
                             {ceremony.timestamp !== "" && <p className="event-date font-weight-bold text-primary">{formatToTimeZone(fromUnixTime(ceremony.timestamp), "dddd MMMM DD, YYYY hh:mm a (z)", {timeZone: "America/Los_Angeles"})} </p>}
-                            <p className="h2 mb-2">🎓</p>
+                            <p className="h1 mb-2">🎓</p>
                             <h3 className="h1 event-name text-white mb-4">Maya's Graduation Ceremony</h3>
                             {ceremony.link !== "" && <a target="_blank" href={ceremony.link} className="btn-info btn event-link">Link to the Ceremony</a>}
                             {ceremony.password !== "" && <p className="text-primary my-2 d-block">Password: <span className="text-underline">{ceremony.password}</span></p>}
