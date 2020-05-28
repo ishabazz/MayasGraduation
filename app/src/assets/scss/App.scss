@@ -118,7 +118,10 @@ body {
   .hero-copy {
     position: relative;
     background-color: $white;
-    height: 100vh;
+    align-self: center;
+    text-align: center;
+    width: 50%;
+    //height: 100vh;
     .name {
     }
     .class {
@@ -129,6 +132,10 @@ body {
   }
 
   .hero-img {
+    background: url("../images/hero.gif") no-repeat top center;
+    background-size: cover;
+    width: 50%;
+
     height: 100vh;
     img {
      // border-bottom-left-radius: 0.5rem;
@@ -267,11 +274,17 @@ a {
 @media screen and (max-width: 768px) {
   .hero > .row {
     flex-direction: column;
-    .hero-copy {
-      height: 90vh;
-    }
     .hero-img {
-      height: 60vh;
+      order: 2;
+      width: 100%;
+    }
+
+    .hero-copy {
+      order: 1;
+      text-align: center;
+      height: auto;
+      margin: 2em 0;
+      width: 100%;
     }
   }
 }
