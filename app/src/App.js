@@ -17,7 +17,6 @@ function App() {
         return db.collection("links").onSnapshot((snapshot => {
             const linksData = [];
             snapshot.forEach(document => linksData.push(({...document.data(), id:document.id})))
-            console.log(linksData);
             setLinks(linksData);
         }));
     }
@@ -37,7 +36,7 @@ function App() {
           <main className="d-flex-column">
               <Hero/>
               <Graduation/>
-              <Fund fund={getLink('fund')}/>
+              <Fund/>
               <WatchParty watchParty={getLink('watch-party')} ceremony={getLink('ceremony')}/>
               <Memories/>
               <Yearbook/>

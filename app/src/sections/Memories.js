@@ -39,13 +39,9 @@ function Memories() {
                         >
                             {memoriesArray.map((image, key) => {
                                 return (
-                                    <LazyLoadComponent
-                                        visibleByDefault={true}
-                                    >
-                                        <Card key={key} className="rounded-0 pb-3 mx-1 mx-md-3 border-0 shadow">
-                                            <Card.Img variant="top" src={image} />
-                                        </Card>
-                                    </LazyLoadComponent>
+                                    <Card key={key} className="rounded-0 pb-3 mx-1 mx-md-3 border-0 shadow">
+                                        <Card.Img variant="top" src={image} />
+                                    </Card>
                                 );
                             })}
                         </Carousel>
