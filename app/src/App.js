@@ -6,6 +6,7 @@ import Hero from "./sections/Hero";
 import Memories from "./sections/Memories";
 import Graduation from "./sections/Graduation";
 import WatchParty from "./sections/WatchParty";
+import Fund from "./sections/Fund";
 import firebase from "./firebase";
 
 function App() {
@@ -36,6 +37,7 @@ function App() {
           <main className="d-flex-column">
               <Hero/>
               <Graduation/>
+              <Fund fund={getLink('fund')}/>
               <WatchParty watchParty={getLink('watch-party')} ceremony={getLink('ceremony')}/>
               <Memories/>
               <Yearbook/>

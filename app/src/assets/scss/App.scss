@@ -25,8 +25,8 @@ $wine: #702632;
 $old-burgundy: #43302E;
 $jet: #303036;
 $taupe-gray: #84828F;
-$raisin-black: #28272B;
-$space-cadet: #2C2E4C;
+$raisin-black: #28272b;
+$space-cadet: #2c2e4c;
 $ghost-white: rgba(232, 237, 242, 0.62);
 $rhythm: #6A6C82;
 
@@ -188,6 +188,17 @@ body {
 
     .invite {
       background-color: $space-cadet;
+    }
+  }
+
+  &.fund {
+    background-color: $vivid-burgundy;
+    color: $white;
+    .event-name  {
+      //margin-bottom: 0.5rem;
+    }
+    .text-underline-danger {
+      //background-image: -webkit-gradient(linear, left top, right top, from(rgba(128, 0, 32, 0.8)));
     }
   }
 }
