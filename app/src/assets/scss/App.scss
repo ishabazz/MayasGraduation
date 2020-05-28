@@ -287,6 +287,9 @@ a {
 
 @media screen and (max-width: 768px) {
   .hero > .row {
+    h1.display-3 {
+      font-size: 3.5rem;
+    }
     flex-direction: column;
     .hero-img {
       order: 2;
