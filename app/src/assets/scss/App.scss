@@ -196,6 +196,9 @@ body {
   background: repeat-x left 1em/1em .15em;
 }
 
+.text-underline {
+  text-decoration: underline;
+}
 
 .text-underline-danger {
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(247, 125, 114, 0.8)));

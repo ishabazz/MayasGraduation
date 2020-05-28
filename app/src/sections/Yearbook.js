@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from 'react';
 import {Button, Container, Form, Row, Col} from "react-bootstrap";
-// import Picker from 'emoji-picker-react';
 import StackGrid from "react-stack-grid";
 
 import firebase from '../firebase.js';
