@@ -4,6 +4,7 @@ import {Row, Container, Col} from "react-bootstrap";
 import { Player } from 'video-react';
 import GraduationVideo from '../assets/images/graduation/graduation.mov'
 import background from '../assets/images/graduation/graduation.svg';
+import poster from '../assets/images/graduation/poster.png';
 
 
 function Graduation() {
@@ -15,7 +16,8 @@ function Graduation() {
                     <Player
                         fluid={false}
                         width={350}
-                        height={350}
+                        height={550}
+                        poster={poster}
                         src={GraduationVideo}
                     />
                     <div className="video-container">
