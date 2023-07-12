@@ -12,7 +12,7 @@
     "date-fns-timezone": "^0.1.4",
     "emoji-picker-react": "^3.1.7",
     "firebase": "^7.14.5",
-    "node-sass": "^4.14.1",
+    "node-sass": "^9.0.0",
     "react": "^16.13.1",
     "react-bootstrap": "^1.0.1",
     "react-dom": "^16.13.1",
@@ -20,7 +20,7 @@
     "react-firebase": "^2.2.8",
     "react-lazy-load-image-component": "^1.4.3",
     "react-linkify": "^1.0.0-alpha",
-    "react-scripts": "3.4.1",
+    "react-scripts": "5.0.1",
     "react-stack-grid": "^0.7.1",
     "video-react": "^0.14.1"
   },
